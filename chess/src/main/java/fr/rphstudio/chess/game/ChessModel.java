@@ -18,8 +18,12 @@ import java.util.List;
  */
 public class ChessModel implements IChess {
     
-    private static ChessModel instance;
+    private ChessModel()
+    {
+        this.define_table();
+    }
     
+    private static ChessModel instance;
     public static ChessModel getInstance(){
         if(ChessModel.instance == null){
             ChessModel.instance = new ChessModel();
@@ -81,6 +85,15 @@ public class ChessModel implements IChess {
     @Override
     public ChessType getPieceType(ChessPosition p) throws EmptyCellException, OutOfBoardException
     {
+        // check position
+        //if( p.x<0 )
+        
+        
+        // check piece non null
+        
+//        return table[p.x][p.y].getChessType();
+        
+        
         throw new EmptyCellException();
     }
     
@@ -90,14 +103,23 @@ public class ChessModel implements IChess {
         
     }
     
-    public Piece table[][] = new Piece [7][7];
+    private Piece Chess_Board[][];
     
     
-    public static void define_table()
+    private void define_table()
     {
-        
+        this.Chess_Board = new Piece [IChess.BOARD_WIDTH][IChess.BOARD_HEIGHT];
+            for(int x=0; x<IChess.BOARD_WIDTH; x++)
+            {
+                Chess_Board[x][IChess.BOARD_POS_Y_BLACK_PAWNS] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_PAWN);
+                Chess_Board[x][IChess.BOARD_POS_Y_WHITE_PAWNS] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_PAWN);
+                //Chess_board[IChess.bo][]
+            }
+           
         
     }
+    
+    
     
 
 }
