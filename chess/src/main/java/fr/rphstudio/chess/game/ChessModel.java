@@ -79,7 +79,19 @@ public class ChessModel implements IChess {
     @Override
     public ChessColor getPieceColor(ChessPosition p) throws EmptyCellException, OutOfBoardException
     {
-        throw new EmptyCellException();
+        //throw new EmptyCellException();
+        
+           if( p.x < 0 || p.y < 0 ||p.x>7  || p.y>7)
+           {
+            throw new OutOfBoardException();
+           }
+           
+           if(Chess_Board[p.x][p.y]==null)
+           {
+               throw new EmptyCellException();
+           }
+           
+            return Chess_Board[p.x][p.y].getChessColor();
     }
     
     @Override
@@ -92,9 +104,19 @@ public class ChessModel implements IChess {
         // check piece non null
         
 //        return table[p.x][p.y].getChessType();
+           if( p.x < 0 || p.y < 0 ||p.x>7  || p.y>7)
+           {
+            throw new OutOfBoardException();
+           }
+           
+           if(Chess_Board[p.x][p.y]==null)
+           {
+               throw new EmptyCellException();
+           }
+                
+        return Chess_Board[p.x][p.y].getChessType();
         
-        
-        throw new EmptyCellException();
+        //throw new EmptyCellException();
     }
     
     @Override
@@ -115,7 +137,27 @@ public class ChessModel implements IChess {
                 Chess_Board[x][IChess.BOARD_POS_Y_WHITE_PAWNS] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_PAWN);
                 //Chess_board[IChess.bo][]
             }
-           
+            
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);          
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][0] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][0] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
+        // LORD KNIGHT
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_KNIGHT);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_KNIGHT);
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_KNIGHT][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_KNIGHT);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_KNIGHT][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_KNIGHT);
+        //Bishop placement
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_BISHOP][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_BISHOP);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_BISHOP][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_BISHOP);
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_BISHOP][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_BISHOP);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_BISHOP][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_BISHOP);
+        //Queen placement
+            Chess_Board[IChess.BOARD_POS_X_QUEEN][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_QUEEN);
+            Chess_Board[IChess.BOARD_POS_X_QUEEN][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_QUEEN);
+        //King placement
+            Chess_Board[IChess.BOARD_POS_X_KING][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_KING);
+            Chess_Board[IChess.BOARD_POS_X_KING][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_KING);
         
     }
     
