@@ -13,22 +13,22 @@ import fr.rphstudio.chess.interf.IChess.ChessType;
  * @author dialloelhadji
  */
 public class Piece {
-    private ChessColor Valentin;
-    private ChessType Richmond;
+    private ChessColor colorp;
+    private ChessType typep;
     
     public Piece(ChessColor color, ChessType type)
     {
-        this.Valentin = color;
-        this.Richmond = type;
+        this.colorp = color;
+        this.typep = type;
     }
     
     public ChessColor getChessColor()
     {
-        return Valentin;
+        return colorp;
     }
     
     public ChessType getChessType()
     {
-        return Richmond;
+        return typep;
     }
 }

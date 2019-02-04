@@ -89,5 +89,15 @@ public class ChessModel implements IChess {
     {
         
     }
+    
+    public Piece table[][] = new Piece [7][7];
+    
+    
+    public static void define_table()
+    {
+        
+        
+    }
+    
 
 }
