@@ -16,6 +16,12 @@ public class Piece {
     private ChessColor colorp;
     private ChessType typep;
     
+    
+    public int getMoves(){
+        
+    return 19;
+    }
+    
     public Piece(ChessColor color, ChessType type)
     {
         this.colorp = color;
