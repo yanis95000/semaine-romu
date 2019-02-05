@@ -115,6 +115,8 @@ public interface IChess
             this.x = -1;
             this.y = -1;
         }
+        
+      
 
         /**
          * Creates a position using the given parameters
