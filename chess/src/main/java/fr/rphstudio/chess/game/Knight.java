@@ -5,6 +5,7 @@
  */
 package fr.rphstudio.chess.game;
 
+import fr.rphstudio.chess.interf.IChess;
 import fr.rphstudio.chess.interf.IMOVE;
 
 /**
@@ -13,11 +14,6 @@ import fr.rphstudio.chess.interf.IMOVE;
  */
 public class Knight implements IMOVE {
     
-    public int[] getPieceMoves(){
-        
-        return 
-                
-                
-    }
+  
     
 }
