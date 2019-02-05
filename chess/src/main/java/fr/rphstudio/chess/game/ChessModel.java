@@ -69,12 +69,19 @@ public class ChessModel implements IChess {
     @Override
     public List<IChess.ChessPosition> getPieceMoves(IChess.ChessPosition p)
     {
+    
+         
         
+<<<<<<< HEAD
          Chess_Board[p.x][p.y].getMoves(p);
          
         
         return new ArrayList<IChess.ChessPosition>();
         
+=======
+        return new ArrayList<IChess.ChessPosition>();
+
+>>>>>>> master
        
     }
     
@@ -153,11 +160,19 @@ public class ChessModel implements IChess {
                 Chess_Board[x][IChess.BOARD_POS_Y_WHITE_PAWNS] = new Piece(ChessColor.CLR_WHITE, IChess.ChessType.TYP_PAWN);
                 //Chess_board[IChess.bo][]
             }
+<<<<<<< HEAD
             
+=======
+           
+>>>>>>> master
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, IChess.ChessType.TYP_ROOK);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, IChess.ChessType.TYP_ROOK);          
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][0] = new Piece(ChessColor.CLR_BLACK, IChess.ChessType.TYP_ROOK);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][0] = new Piece(ChessColor.CLR_BLACK, IChess.ChessType.TYP_ROOK);
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
         // LORD KNIGHT
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, IChess.ChessType.TYP_KNIGHT);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, IChess.ChessType.TYP_KNIGHT);

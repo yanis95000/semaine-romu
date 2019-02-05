@@ -14,6 +14,13 @@ import fr.rphstudio.chess.interf.IMOVE;
  */
 public class Knight implements IMOVE {
     
+<<<<<<< HEAD
+=======
+    public int[] getPieceMoves()
+    {
+        return null;
+    }
+>>>>>>> master
   
     
 }

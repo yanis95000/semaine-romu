@@ -14,7 +14,11 @@ import fr.rphstudio.chess.interf.IMOVE;
  *
  * @author dialloelhadji
  */
+<<<<<<< HEAD
 public class Piece implements IMOVE{
+=======
+public class Piece{
+>>>>>>> master
 
    
     private ChessColor colorp;
@@ -29,12 +33,26 @@ public class Piece implements IMOVE{
     return 19;
     }
     
+<<<<<<< HEAD
     public Piece(ChessColor color, ChessType type, IMOVE Name_Pawn)
+=======
+    
+    public Piece(ChessColor color, ChessType type, IMOVE Name_Pawn)
+
+>>>>>>> master
     {
         this.colorp = color;
         this.typep = type;
         this.Name_Pawnp = Name_Pawn;
         
+<<<<<<< HEAD
+=======
+    }
+    
+    public Piece(ChessColor color, ChessType type)
+    {
+        this(color,type,null);
+>>>>>>> master
     }
     
     public ChessColor getChessColor()
@@ -47,8 +65,11 @@ public class Piece implements IMOVE{
         return typep;
     }
 
+<<<<<<< HEAD
     @Override
     public int[] getPieceMoves() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+=======
+>>>>>>> master
 }

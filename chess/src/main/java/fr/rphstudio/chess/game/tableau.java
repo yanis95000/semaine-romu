@@ -13,5 +13,9 @@ import java.util.List;
  * @author titouanhuteau
  */
 public class tableau {
+<<<<<<< HEAD
     List<IChess.ChessPosition>
+=======
+    //List<IChess.ChessPosition>
+>>>>>>> master
 }

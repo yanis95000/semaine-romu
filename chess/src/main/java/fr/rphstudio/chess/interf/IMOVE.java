@@ -11,7 +11,13 @@ package fr.rphstudio.chess.interf;
  */
 public interface IMOVE {
     
+<<<<<<< HEAD
     
        public int[] getPieceMoves(IChess.ChessPosition p);
        
+=======
+  
+       public int[] getPieceMoves();
+
+>>>>>>> master
 }
