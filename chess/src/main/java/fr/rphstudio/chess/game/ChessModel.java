@@ -17,6 +17,9 @@ import java.util.List;
  * @author dialloelhadji
  */
 public class ChessModel implements IChess {
+    private int nb_black = 18;
+    private int nb_white = 18;
+    private Piece Chess_Board[][];
     
     private ChessModel()
     {
@@ -35,6 +38,7 @@ public class ChessModel implements IChess {
     @Override
     public long getPlayerDuration(ChessColor color, boolean isPlaying)
     {
+        
         return 0;
     }
     
@@ -65,6 +69,7 @@ public class ChessModel implements IChess {
     @Override
     public List<ChessPosition> getPieceMoves(ChessPosition p)
     {
+        
         return new ArrayList<ChessPosition>();
         
        
@@ -73,7 +78,15 @@ public class ChessModel implements IChess {
     @Override
     public int getNbRemainingPieces(ChessColor color)
     {
-        return 0;
+        if(color == ChessColor.CLR_BLACK){
+        
+        return nb_black;
+        }else{
+        
+        return nb_white;
+        }
+        
+        
     }
     
     @Override
@@ -125,7 +138,7 @@ public class ChessModel implements IChess {
         
     }
     
-    private Piece Chess_Board[][];
+
     
     
     private void define_table()
@@ -140,8 +153,13 @@ public class ChessModel implements IChess {
             
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);          
+<<<<<<< HEAD
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][0] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][0] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_ROOK);
+=======
+            Chess_Board[IChess.BOARD_POS_X_KINGSIDE_ROOK][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_ROOK);
+            Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_ROOK][0] = new Piece(ChessColor.CLR_BLACK, ChessType.TYP_ROOK);
+>>>>>>> master
         // LORD KNIGHT
             Chess_Board[IChess.BOARD_POS_X_KINGSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_KNIGHT);
             Chess_Board[IChess.BOARD_POS_X_QUEENSIDE_KNIGHT][7] = new Piece(ChessColor.CLR_WHITE, ChessType.TYP_KNIGHT);
